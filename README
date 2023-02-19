@@ -1,0 +1,13 @@
+
+this proj is based on link https://www.youtube.com/watch?v=qTQZZpb-m7Q
+
+cgr-ocs :
+    - cgrates
+        * redis
+        * mysql
+    - freeswitch
+
+cd /usr/share/cgrates/data/tariffplan/prepaid1centpsec/ && cgr-loader
+cd /etc/cgrates/ && vi cgrates.cfg
+systemctl restart cgrates
+tail -f /var/log/syslog
