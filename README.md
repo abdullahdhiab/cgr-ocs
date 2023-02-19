@@ -80,10 +80,8 @@ you'll be prompted to set MYSQL_ROOT_PASSWORD, set it to *CGRateS.org*
 
 #  6. Configuration & run:
 freeswitch default config based on /etc/freeswitch and we need to change it. 1st stop the service
-    `systemctl stop freeswitch`.
-
-and stop cgrates service `systemctl stop cgrates`.
-no go to the path */usr/share/cgrates/tutorials/fs_evsock*.
+    `systemctl stop freeswitch` and stop cgrates service `systemctl stop cgrates`.
+now go to the path */usr/share/cgrates/tutorials/fs_evsock*.
 ```
 cd /usr/share/cgrates/tutorials/fs_evsock
 
