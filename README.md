@@ -124,7 +124,12 @@ root@cgrates:/usr/share/cgrates/tutorials/fs_evsock/cgrates/etc/init.d# cgr-cons
 }
 root@cgrates:/usr/share/cgrates/tutorials/fs_evsock/cgrates/etc/init.d#
 
+cd /usr/share/cgrates/tariffplans/tutorial
+cgr-loader -verbose
+
 ```
+
+ready to test call and trace ..
 
 
 cd /usr/share/cgrates/data/tariffplan/prepaid1centpsec/ && cgr-loader
