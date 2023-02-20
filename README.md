@@ -84,7 +84,45 @@ freeswitch default config based on /etc/freeswitch and we need to change it. 1st
 now go to the path */usr/share/cgrates/tutorials/fs_evsock*.
 ```
 cd /usr/share/cgrates/tutorials/fs_evsock
+cd freeswitch/etc/freeswitch
+vi vars.xml
+  <X-PRE-PROCESS cmd="set" data="domain=$${local_ip_v4}"/>
+vi sip_profiles/internal.xml
+    <param name="rtp-ip" value="$${local_ip_v4}"/>
+    <param name="sip-ip" value="$${local_ip_v4}"/>
+    <param name="presence-hosts" value="$${domain},$${local_ip_v4}"/>
 
+cd /usr/share/cgrates/tutorials/fs_evsock/freeswitch/etc/init.d
+./freeswitch start
+./freeswitch status
+
+root@cgrates:~/fs_evsock/freeswitch# fs_cli -x 'sofia status'
+                     Name          Type                                       Data      State
+=================================================================================================
+          192.168.229.135         alias                                   internal      ALIASED
+                  cgrtest       profile               sip:mod_sofia@127.0.0.1:5080      RUNNING (0)
+                 internal       profile         sip:mod_sofia@192.168.229.135:5060      RUNNING (0)
+=================================================================================================
+2 profiles 1 alias
+
+cd /usr/share/cgrates/storage/mysql/
+root@cgrates:/usr/share/cgrates/storage/mysql# ./setup_cgr_db.sh root CGRateS.org
+
+cgr-migrator -exec=*set_versions -config_path=/usr/share/cgrates/tutorials/fs_evsock/cgrates/etc/cgrates/
+cd /usr/share/cgrates/tutorials/fs_evsock/cgrates/etc/init.d/
+root@cgrates:/usr/share/cgrates/tutorials/fs_evsock/cgrates/etc/init.d# ./cgrates start
+root@cgrates:/usr/share/cgrates/tutorials/fs_evsock/cgrates/etc/init.d# ./cgrates status
+cgrates is running.
+root@cgrates:/usr/share/cgrates/tutorials/fs_evsock/cgrates/etc/init.d# cgr-console status
+{
+ "ActiveGoroutines": 52,
+ "GoVersion": "go1.18",
+ "MemoryUsage": "8.4MiB",
+ "NodeID": "CGRFreeswitch",
+ "RunningSince": "Sun Feb 19 20:48:53 +03 2023",
+ "Version": "CGRateS@v0.11.0~dev-20221130185305-258492fcf3a9"
+}
+root@cgrates:/usr/share/cgrates/tutorials/fs_evsock/cgrates/etc/init.d#
 
 ```
 

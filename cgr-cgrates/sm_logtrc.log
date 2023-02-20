@@ -1,0 +1,19 @@
+E	v@@wUÉ¾6¡kWøþ
+P8ºP8ºuuid,direction,created,created_epoch,name,state,cid_name,cid_num,ip_addr,dest,application,application_data,dialplan,context,read_codec,read_rate,read_bit_rate,write_codec,write_rate,write_bit_rate,secure,hostname,presence_id,presence_data,accountcode,callstate,callee_name,callee_num,callee_direction,call_uuid,sent_callee_name,sent_callee_num,initial_cid_name,initial_cid_num,initial_ip_addr,initial_dest,initial_dialplan,initial_context
+c56b1ffb-412d-4712-bb4d-69b3a7cacbcc,inbound,2023-02-19 21:05:48,1676829948,sofia/internal/1001@192.168.229.135,CS_EXECUTE,z1001,1001,192.168.229.1,1003,bridge,user/1003@192.168.229.135,XML,default,G722,16000,64000,G722,16000,64000,,cgrates,1001@192.168.229.135,,1001,ACTIVE,Outbound Call,1003,SEND,c56b1ffb-412d-4712-bb4d-69b3a7cacbcc,Outbound Call,1003,z1001,1001,192.168.229.1,1003,XML,default
+e3169c54-9dc5-4ce0-8629-f80ea3d888fa,outbound,2023-02-19 21:05:48,1676829948,sofia/internal/1003@192.168.229.1:55631,CS_EXCHANGE_MEDIA,Extension 1001,1001,192.168.229.1,1003,,,XML,default,PCMU,8000,64000,PCMU,8000,64000,,cgrates,1003@192.168.229.135,,,ACTIVE,Outbound Call,1003,SEND,c56b1ffb-412d-4712-bb4d-69b3a7cacbcc,Extension 1001,1001,Extension 1001,1001,192.168.229.1,1003,XML,default
+
+2 total.EP#×@@ÏÜÉð¿Ç6¥cÛ!E
+
+P8º4P8º2{"id":14,"result":{"Category":"call","Tenant":"cgrates.org","Subject":"1001","Account":"1001","Destination":"1003","ToR":"*voice","Cost":0.02,"Timespans":[{"TimeStart":"2023-02-19T21:06:10+03:00","TimeEnd":"2023-02-19T21:06:12+03:00","Cost":0.02,"RateInterval":{"Timing":{"ID":"*any","Years":[],"Months":[],"MonthDays":[],"WeekDays":[],"StartTime":"00:00:00","EndTime":""},"Rating":{"ConnectFee":0,"RoundingMethod":"*up","RoundingDecimals":4,"MaxCost":0.12,"MaxCostStrategy":"*disconnect","Rates":[{"GroupIntervalStart":0,"Value":0.01,"RateIncrement":1000000000,"RateUnit":1000000000}]},"Weight":10},"DurationIndex":12000000000,"Increments":[{"Duration":1000000000,"Cost":0.01,"BalanceInfo":{"Unit":null,"Monetary":{"UUID":"5961d1f2-fb9b-4a84-bb93-6797bb494e34","ID":"test","Value":8.0399,"RateInterval":null},"AccountID":"cgrates.org:1001"},"CompressFactor":2}],"RoundIncrement":null,"MatchedSubject":"*out:cgrates.org:call:1001","MatchedPrefix":"1003","MatchedDestId":"DST_1003","RatingPlanId":"RP_1001","CompressFactor":1}],"RatedUsage":2000000000,"AccountSummary":{"Tenant":"cgrates.org","ID":"1001","BalanceSummaries":[{"UUID":"5961d1f2-fb9b-4a84-bb93-6797bb494e34","ID":"test","Type":"*monetary","Initial":8.0599,"Value":8.0399,"Disabled":false}],"AllowNegative":false,"Disabled":false}},"error":null}
+
+&.E½%W@@âÒÂëSVûleÒÿ±
+P8º4P8«*3
+$3
+SET
+$20
+acc_cgrates.org:1001
+$345
+®ActionTriggersÀAllowNegativeÂªBalanceMap©*monetary§BlockerÂªCategories®DestinationIDs¨DisabledÂ®ExpirationDate¯ÿÿ¦FactorÀ¢ID¤testRatingSubject ¬SharedGroups©TimingIDs§TimingsÀ¤UuidÚ$5961d1f2-fb9b-4a84-bb93-6797bb494e34¥ValueË@ mÅÖ8¦WeightË@$¨DisabledÂ¢ID°cgrates.org:1001¬UnitCountersÀªUpdateTime¯Û\
+ c´
+
