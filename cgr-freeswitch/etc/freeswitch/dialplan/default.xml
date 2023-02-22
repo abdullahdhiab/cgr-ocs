@@ -12,9 +12,19 @@
         <action application="info" />
       </condition>
     </extension>
-   <extension name="CGRateS_Auth">
+    
+    <!-- to log all cgr_notify -->
+    <extension name="CGRateS_notify_log">
+      <condition field="${cgr_notify}" expression="[\S\s]+[\S]+">
+        <action application="log" data="------ cgr_notify: ${cgr_notify}  ------" />
+      </condition>
+    </extension>
+
+
+    <extension name="CGRateS_Auth">
       <condition field="${cgr_notify}" expression="^$">
-        <action application="info"/>
+        <action application="log" data="------ cgr_notify: ${cgr_notify}  ------" />
+        <action application="info" />
         <action application="park" />
       </condition>
     </extension>
@@ -36,7 +46,7 @@
         <action application="hangup" />
       </condition>
     </extension>
-     <extension name="CGR Routes">
+    <extension name="CGR Routes">
       <condition field="cgr_routes" expression=".+">
         <action application="set" data="cgr_route=${cgr_routes[1]}" />
       </condition>
@@ -51,4 +61,3 @@
 
   </context>
 </include>
-
