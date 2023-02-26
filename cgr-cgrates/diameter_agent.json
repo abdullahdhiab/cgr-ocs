@@ -1,0 +1,21 @@
+{
+    "diameter_agent": {
+        "enabled": true,
+        "listen": "192.168.229.135:3868",
+        "listen_net": "tcp",
+        "dictionaries_path": "/usr/share/cgrates/diameter/dict/",
+        "sessions_conns": [
+            "*birpc_internal"
+        ],
+        "origin_host": "cgratesvm01",
+        "origin_realm": "sgstel.local",
+        "vendor_id": 266,
+        "product_name": "CGRateS",
+        "concurrent_requests": -1,
+        "synced_conn_requests": false,
+        "asr_template": "",
+        "rar_template": "",
+        "forced_disconnect": "*none",
+        "request_processors": []
+    }
+}
