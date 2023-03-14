@@ -116,7 +116,7 @@ func executeCommand(command string) {
 	}
 }
 
-func main() {
+func xmain() {
 	if err := cgrConsoleFlags.Parse(os.Args[1:]); err != nil {
 		return
 	}
